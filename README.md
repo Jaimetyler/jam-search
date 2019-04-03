@@ -1,5 +1,2 @@
-# project-x
-
-### Adding items to the Read Me File for testing this branch pulling thing. 
-
-This is some stuff to hold space for this test
+# project-xtesst information for the git stuff
+>>>>>>> d2668959a2970aa7dcc0e519e1489f2b4
