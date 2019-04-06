@@ -1,0 +1,155 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6em;
+    color:#666;
+    background-image:url(../images/audience.jpg);
+    background-size: cover;
+    font-size:14px;
+}
+
+
+a{
+    color:#333;
+    text-decoration:none;
+}
+
+#container{
+    width:740px;
+    background:white;
+    margin:auto;
+}
+
+.clearfix{
+    clear:both;
+}
+
+header{
+    padding:30px 20px;
+    background: #f4f4f4;
+}
+
+header h1{
+    color: black;
+    margin-bottom:5px;
+}
+
+
+header span{
+
+        color:#dd2826;
+}
+
+section{
+
+    padding: 30px 20px 20px 20px;
+
+
+}
+
+
+footer{
+    padding:20px;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+#search-form{
+    display:block;
+    margin-bottom:15px;
+}
+
+
+.fieldcontainer{
+display:block;
+position:relative;
+width:90%;
+margin: 0 auto;
+
+}
+
+#search-btn:hover{
+
+    opacity:0.9;
+
+}
+
+
+#results li{
+    padding: 10px 0;
+    list-style:none;
+    overflow:auto;
+}
+
+.list-left{
+
+    float:left;
+    width:20%;
+
+}
+
+.list-left img{
+    width:100%;
+    padding:3px;
+
+}
+
+
+
+.search-field{
+    box-sizing:border-box;
+    display:block;
+    width: 45%;
+    color:#ccc;
+    border:1px;
+    border:solid #c8c8c8;
+    font-size: 1.6em;
+    border-radius:1px;
+
+}
+
+#search-btn{
+    position:absolute;
+    right:360px;
+    top:5px;
+    height:32px;
+    width:32px;
+    border:0;
+    zoom:1;
+    cursor:pointer;
+    background:transparent url(../images/download.png);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
