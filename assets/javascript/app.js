@@ -1,6 +1,23 @@
+//global variable
+
+var artist = $("#artist-input").val().trim();
+
+function searchBandEvents(artist) {
+
+  var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=47972149c9ef95f0470de3a7f2d73af9&date=upcoming";
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    //print the entire object to console
+    console.log(response);
+
+  });
 
 
-  function searchBandsInTown(artist) {
+}
+
+function searchBandsInTown(artist) {
 
     // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=47972149c9ef95f0470de3a7f2d73af9";
@@ -11,6 +28,7 @@
 
       // Printing the entire object to console
       console.log(response);
+      
 
       // Constructing HTML containing the artist information
       var artistName = $("<h1>").text(response.name);
@@ -35,5 +53,6 @@
 
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
+    searchBandEvents(inputArtist);
   });
  
