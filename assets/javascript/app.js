@@ -11,7 +11,28 @@ function searchBandEvents(artist) {
   }).then(function(response) {
     //print the entire object to console
     console.log(response);
+    for (i = 0; i < response.length; i++) {
 
+    var eventDate = response[i].datetime;
+    var venueName = response[i].venue.name;
+    var location = response[i].venue.city;
+    var ticketURL = response[i].offers.url;
+
+    var datePretty = moment(eventDate).format("MM/DD/YYYY");
+    
+    $("#events-table").append(`
+      <tr>
+      <td> ${datePretty} </td>
+      <td> ${venueName} </td>
+      <td> ${location} </td>
+      <td> ${ticketURL} </td>
+
+      </tr>
+
+
+    `)
+    }
+    
   });
 
 
