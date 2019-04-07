@@ -1,4 +1,31 @@
-<<<<<<< HEAD
+ // Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBFpSgNqrH_XGmnK5tJgp7s-qPlDqe2vUM",
+  authDomain: "project-x-60d84.firebaseapp.com",
+  databaseURL: "https://project-x-60d84.firebaseio.com",
+  projectId: "project-x-60d84",
+  storageBucket: "project-x-60d84.appspot.com",
+  messagingSenderId: "905166809578"
+};
+firebase.initializeApp(config);
+
+var reviewData = firebase.database();
+
+//creating variables that will be stored
+var review;
+var rating;
+
+$("#add-review").on("click", function(){
+  event.preventDefault();
+
+  review = $("#review-input").val().trim();
+
+  reviewData.ref().push({
+    review: review,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP
+});
+$("form")[0].reset();
+});
 //global variable
 
 var artist = $("#artist-input").val().trim();
@@ -40,40 +67,10 @@ function searchBandEvents(artist) {
 }
 
 function searchBandsInTown(artist) {
-=======
 
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyBFpSgNqrH_XGmnK5tJgp7s-qPlDqe2vUM",
-  authDomain: "project-x-60d84.firebaseapp.com",
-  databaseURL: "https://project-x-60d84.firebaseio.com",
-  projectId: "project-x-60d84",
-  storageBucket: "project-x-60d84.appspot.com",
-  messagingSenderId: "905166809578"
-};
-firebase.initializeApp(config);
-
-var reviewData = firebase.database();
-
-//creating variables that will be stored
-var review;
-var rating;
-
-$("#add-review").on("click", function(){
-  event.preventDefault();
-
-  review = $("#review-input").val().trim();
-
-  reviewData.ref().push({
-    review: review,
-    dateAdded: firebase.database.ServerValue.TIMESTAMP
-});
-$("form")[0].reset();
-});
 
 
   function searchBandsInTown(artist) {
->>>>>>> 8e939d36283893b315f7f26db74e39ed5fedb056
 
     // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=47972149c9ef95f0470de3a7f2d73af9";
@@ -84,10 +81,7 @@ $("form")[0].reset();
 
       // Printing the entire object to console
       console.log(response);
-<<<<<<< HEAD
       
-=======
->>>>>>> 8e939d36283893b315f7f26db74e39ed5fedb056
 
       // Constructing HTML containing the artist information
       var artistName = $("<h1>").text(response.name);
@@ -112,14 +106,6 @@ $("form")[0].reset();
 
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
-<<<<<<< HEAD
     searchBandEvents(inputArtist);
   });
- 
-=======
-  });
- 
-
-
-
->>>>>>> 8e939d36283893b315f7f26db74e39ed5fedb056
+}
