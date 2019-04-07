@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 </head>
 
 <body>
-
-
 
   <!-- Artist Select Box -->
   <form id="artist-form">
@@ -42,6 +41,25 @@
     </tr>
     
   </div>
+
+</body>
+
+
+  <div class = "card">
+    <div class = "card-header" id = "review-header">
+      <h2>Artist Reviews</h2>
+    </div>
+    <div class = "card-body" id = "artist-review">
+      <form>
+        <div class="textArea">
+          <label for="review-input">Add a review</label>
+          <input class="form-control" id="review-input" type="text">
+          <button class = "btn btn-primary" id = "add-review">Add Review</button>
+        </div>
+        <div id = "review-display"></div>
+    </div>
+  </div>
+
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
