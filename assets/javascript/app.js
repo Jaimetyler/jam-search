@@ -1,3 +1,5 @@
+ $(document).ready(function(){
+   console.log("hi")
  // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBFpSgNqrH_XGmnK5tJgp7s-qPlDqe2vUM",
@@ -26,12 +28,13 @@ $("#add-review").on("click", function(){
 });
 $("form")[0].reset();
 });
+
 //global variable
 
 var artist = $("#artist-input").val().trim();
 
 function searchBandEvents(artist) {
-
+  console.log(artist);
   var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=47972149c9ef95f0470de3a7f2d73af9&date=upcoming";
   $.ajax({
     url: queryURL,
@@ -65,8 +68,6 @@ function searchBandEvents(artist) {
 
 
 }
-
-function searchBandsInTown(artist) {
 
 
 
@@ -103,9 +104,9 @@ function searchBandsInTown(artist) {
     event.preventDefault();
     // Storing the artist name
     var inputArtist = $("#artist-input").val().trim();
-
+    console.log(inputArtist)
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
   });
-}
+})
