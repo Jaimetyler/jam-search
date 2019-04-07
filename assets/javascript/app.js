@@ -47,7 +47,7 @@ function searchBandEvents(artist) {
     var eventDate = response[i].datetime;
     var venueName = response[i].venue.name;
     var location = response[i].venue.city;
-    var ticketURL = response[i].offers.url;
+    var ticketURL = response[i].offers[0].url;
 
     var datePretty = moment(eventDate).format("MM/DD/YYYY");
     
@@ -56,7 +56,7 @@ function searchBandEvents(artist) {
       <td> ${datePretty} </td>
       <td> ${venueName} </td>
       <td> ${location} </td>
-      <td> ${ticketURL} </td>
+      <td> <a href=${ticketURL} target="_blank"> Buy Tickets </a> </td>
 
       </tr>
 
