@@ -1,5 +1,37 @@
-console.log("this is a test to the Dom");
+$(document).ready(function() {
+    $(".wrap").hide();
 
+    $("#submit").on("click", function () {
+
+        $(".wrap").hide();
+        $(".img").show();
+        //$(code to send to firebase).????();
+        $("#textarea").val('');
+        $("#review").show();
+    })
+    $("#close").on("click", function () {
+
+        $(".wrap").hide();
+        $(".img").show();
+        $("#review").show();
+
+    })
+
+    $(".img").on("click", function () {
+
+        $(".wrap").show();
+        $(".img").hide();
+        $("#review").hide();
+
+    })
+});
+
+
+
+
+
+console.log("this is a test to the Dom");
+// animates the search bar......
 $(function() {
 
 var searchField = $ ('#query');
@@ -40,6 +72,12 @@ $(searchField).on('blur', function() {
     }
     
     });
+    //end of the animation of search bar code.......
+
+
+
+
+    
 
     $('#search-form').submit(function(e){
 
@@ -107,13 +145,13 @@ function getOutput (item){
     var channelTitle = item.snippet.ChannelTitle;
     var videoDate = item.snippet.publishedAt;
 
-
+    // appends to the html
     var output = '<li>' +
     '<div class = "list-left">' +
     '<img src="'+thumb+'">' +
     '</div>' +
     '<div class="list-right">' +
-    '<h3><a class = "fancybox fancybox.iframe" href="http://www.youtube.com/embed/">'+videoID+''+title+'</a></h3>' +
+    '<h3><a class = "iframe" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a></h3>' +
     '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
     '<p>'+description+'</p>' +
     '</div>'+
@@ -121,6 +159,9 @@ function getOutput (item){
     '< div class= "clearfix"></div>'+
     '';
 
+
+
+    //old iframe code that didn't work.......
 //<iframe src="https://gifer.com/embed/NgUv" width=480 height=328.800 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">
 
     return output;
