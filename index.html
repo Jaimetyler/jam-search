@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jam Search</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+
+  <!-- Artist Select Box -->
+  <form id="artist-form">
+
+    <!-- Label for Text Box -->
+    <label for="artist-input">Choose Your Artist</label>
+    
+    
+    <!-- Text Input Box -->
+    <input type="text" id="artist-input"><br>
+    
+  
+    
+    <!-- Submit Button -->
+    <input id="select-artist" type="submit" value="GO!">
+  </form>
+
+  <!-- Artist Information -->
+  <div id="artist-div"></div>
+<br>
+<br>
+  <div class="table" id="events-table">
+    <tr>
+      
+    </tr>
+    
+  </div>
+
+</body>
+
+
+  <div class = "card">
+    <div class = "card-header" id = "review-header">
+      <h2>Artist Reviews</h2>
+    </div>
+    <div class = "card-body" id = "artist-review">
+      <form>
+        <div class="textArea">
+          <label for="review-input">Add a review</label>
+          <input class="form-control" id="review-input" type="text">
+          <button class = "btn btn-primary" id = "add-review">Add Review</button>
+        </div>
+        <div id = "review-display"></div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script src = "assets/javascript/app.js"></script>
+</body>
+</html>

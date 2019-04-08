@@ -3,6 +3,22 @@ body {
     background-size: cover;
 }
 
+
+
+
+
+
+th {
+    font-size: 18pt;
+    font-style: bold;
+}
+
+
+
+
+
+
+
 #youtube-div {
 display: none;
 
