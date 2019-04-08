@@ -1,3 +1,5 @@
+
+
 var tag = document.createElement('script');
 
   tag.src = "https://www.youtube.com/iframe_api";
@@ -7,7 +9,9 @@ var tag = document.createElement('script');
     var videoID;
     // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
-    var player;
+    // $('#player').css(hidden);
+    
+    var player; 
     function onYouTubeIframeAPIReady() {
       console.log("you working?")
       player = new YT.Player('youtube-div', {
@@ -31,10 +35,13 @@ var tag = document.createElement('script');
     //    the player should play for six seconds and then stop.
 
     function onPlayerStateChange(event) {
-      if (event.data == -1) {
-        console.log("this is equal to -1")
-      } 
-    }
+      if (event.data === -1) {
+        console.log(event.data)
+        $("#youtube-div").remove;
+      } else {
+        document.getElementById("#youtube-div").style.display = "block";
+      }
+    } 
     function stopVideo() {
       player.stopVideo();
     }
@@ -94,10 +101,10 @@ var tag = document.createElement('script');
     event.preventDefault();
     // Storing the artist name
     var inputArtist = $("#artist-input").val().trim();
-    // setInterval (function(){
-    //   console.log(player.getPlayerState())
-    //   }, 100);
+    
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchYoutube(inputArtist);
     searchBandsInTown(inputArtist);
+    onPlayerReady();
+
   });
