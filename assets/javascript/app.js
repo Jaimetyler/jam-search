@@ -1,5 +1,5 @@
  $(document).ready(function(){
-   console.log("hi")
+
  // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBFpSgNqrH_XGmnK5tJgp7s-qPlDqe2vUM",
@@ -26,6 +26,7 @@ $("#add-review").on("click", function(){
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
 });
+//Ask Jaime what this code is doing?
 $("form")[0].reset();
 });
 
