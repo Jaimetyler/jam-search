@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 var x = document.getElementById("demo");
 
 function getLocation() {
@@ -9,7 +8,7 @@ function getLocation() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-=======
+
 $(document).ready(function(){
     $("#artist-review").hide();
     $(".wrap").hide();
@@ -38,7 +37,7 @@ $(document).ready(function(){
   
     })
   
->>>>>>> 502520a482e1023633d2f4f2716e4ec5dda45d48
+
 
  // Initialize Firebase  
 var config = {
@@ -70,13 +69,11 @@ $("#add-review").on("click", function(){
 $("form")[0].reset();
 });
 
-<<<<<<< HEAD
+
 $("#location-button").on("click", function(){
     console.log(showPosition());
 })
-=======
-=======
->>>>>>> 502520a482e1023633d2f4f2716e4ec5dda45d48
+
 //global variable
 
 var artist = $("#artist-input").val().trim();
@@ -206,10 +203,7 @@ $(searchField).on('blur', function() {
   }
   
   });
-<<<<<<< HEAD
- 
->>>>>>> 352ee2f841f19056ad1ad559ca3e8e251e10338f
-=======
+
   //end of the animation of search bar code.......
 
 
@@ -310,4 +304,89 @@ function getOutput (item){
 
 
 }
->>>>>>> 502520a482e1023633d2f4f2716e4ec5dda45d48
+
+
+var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var videoID;
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    // $('#player').css(hidden);
+    
+    var player; 
+    function onYouTubeIframeAPIReady() {
+      console.log("you working?")
+      player = new YT.Player('youtube-div', {
+        height: '390',
+        width: '640',
+        videoId: videoID,
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+    
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+    
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+
+    function onPlayerStateChange(event) {
+      if (event.data === -1) {
+        console.log(event.data)
+        $("#youtube-div").hide;
+      } else {
+        document.getElementById("#youtube-div").style.display = "block";
+      }
+    } 
+    function stopVideo() {
+      player.stopVideo();
+    }
+
+  function renderYouTube (videoIDImport) {
+    
+    videoID = videoIDImport
+    console.log(videoID)
+    player.loadVideoById(videoIDImport)
+
+  }
+
+
+
+  function searchYoutube(artist) {
+
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoLicense=youtube&q=" + artist + "&key=AIzaSyAhtXj_f5qNBZXU6LiTjrhVTjmQ7Tmk9zQ&videoEmbeddable=true&videoSyndicated=true";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+
+      // Printing the entire object to console
+      renderYouTube(response.items[0].id.videoId); //this is bringing back the youtube video ID!!
+
+    });
+  }
+  
+
+  // Event handler for user clicking the select-artist button
+  $("#select-artist").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    var inputArtist = $("#artist-input").val().trim();
+    
+    // Running the searchBandsInTown function(passing in the artist as an argument)
+    searchYoutube(inputArtist);
+    onPlayerReady();
+
+  });
+
