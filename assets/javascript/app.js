@@ -1,14 +1,3 @@
-
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
 $(document).ready(function(){
     $("#artist-review").hide();
     $(".wrap").hide();
@@ -37,7 +26,6 @@ $(document).ready(function(){
   
     })
   
-
 
  // Initialize Firebase  
 var config = {
@@ -68,11 +56,6 @@ $("#add-review").on("click", function(){
 //Ask Jaime what this code is doing?
 $("form")[0].reset();
 });
-
-
-$("#location-button").on("click", function(){
-    console.log(showPosition());
-})
 
 //global variable
 
@@ -209,7 +192,6 @@ $(searchField).on('blur', function() {
 
 
 
-  
 
   $('#search-form').submit(function(e){
 
