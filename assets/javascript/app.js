@@ -270,7 +270,7 @@ function getOutput (item){
   '<p>'+description+'</p>' +
   '</div>'+
   '</li>' +
-  '< div class= "clearfix"></div>'+
+  
   '';
 
 
