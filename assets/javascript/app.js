@@ -44,7 +44,7 @@ var reviewData = firebase.database();
 var review;
 var rating;
 
-$("#add-review").on("click", function(){
+$("#reviewArtist").on("click", function(){
   event.preventDefault();
 
   review = $("#review-input").val().trim();
@@ -53,8 +53,8 @@ $("#add-review").on("click", function(){
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
 });    
-//Ask Jaime what this code is doing?
-$("form")[0].reset();
+console.log(review);
+
 });
 
 //global variable
