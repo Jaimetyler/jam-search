@@ -14,7 +14,9 @@ body{
     font-size:14px;
 }
 
-
+#youtube-div {
+    display: none;
+}
 a{
     color:#333;
     text-decoration:none;
