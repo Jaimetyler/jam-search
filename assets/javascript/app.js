@@ -25,9 +25,8 @@ $("#add-review").on("click", function(){
   reviewData.ref().push({
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
-});
-//Ask Jaime what this code is doing?
-$("form")[0].reset();
+  });
+
 });
 
 //global variable
