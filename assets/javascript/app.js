@@ -265,7 +265,7 @@ function getOutput (item){
   '<img src="'+thumb+'">' +
   '</div>' +
   '<div class="list-right">' +
-  '<h3><a class = "iframe" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a></h3>' +
+  '<h3><a class = "iframe" href="http://www.youtube.com/watch/'+videoId+'">'+title+'target="_blank"</a></h3>' +
   '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
   '<p>'+description+'</p>' +
   '</div>'+
