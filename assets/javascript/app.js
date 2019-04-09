@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+    $("#artist-review").hide();
     $(".wrap").hide();
   
     $("#submit").on("click", function () {
