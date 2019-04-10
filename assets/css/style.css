@@ -137,20 +137,19 @@ margin: 0 auto;
     left:593 !important;
     margin:20px 20px 20px 20px;
     padding: 20px 20px 20px 20px;
-    width: 294px;
+    width: 97%;
     height: 400px;
     border:solid #3b5998;
     border-radius: 19px;
     background-color:white;
     background-image:url(../images/drums.jpg);
     background-size: cover;
-    
-    
     }
 
-    #textarea {
+    #reviewArtist {
         background-color:rgba(7, 157, 245, 0.767);
         border-radius: 19px;
+        width: 100%;
     }
 
 
@@ -177,9 +176,6 @@ margin: 0 auto;
 
     #comment{
         position:fixed;
-
-
-
     }
 
     .bottom {
