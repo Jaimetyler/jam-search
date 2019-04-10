@@ -39,22 +39,28 @@ var config = {
 firebase.initializeApp(config);
 
 var reviewData = firebase.database();
+//var reviewArtist = firebase.database().ref().key();
 
 //creating variables that will be stored
 var review;
 var rating;
 
-$("#add-review").on("click", function(){
+
+$("#submit").on("click", function(){
   event.preventDefault();
 
-  review = $("#review-input").val().trim();
+  review = $("#artistReview").val().trim();
+  
 
   reviewData.ref().push({
+    artist: artist,
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   });
 
+console.log(review);
 });
+
 
 //global variable
 
@@ -137,8 +143,9 @@ function searchBandEvents(artist) {
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
     search();
+    
   });  
-})  
+  
 
 
 function search () {
@@ -224,3 +231,4 @@ function getOutput (item){
 }
 
 
+});
