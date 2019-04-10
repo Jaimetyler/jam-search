@@ -39,6 +39,7 @@ var config = {
 firebase.initializeApp(config);
 
 var reviewData = firebase.database();
+//var reviewArtist = firebase.database().ref().key();
 
 //creating variables that will be stored
 var review;
@@ -141,6 +142,7 @@ function searchBandEvents(artist) {
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
     search();
+    
   });  
   
 
