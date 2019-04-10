@@ -52,8 +52,7 @@ $("#reviewArtist").on("click", function(){
   reviewData.ref().push({
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
-});    
-console.log(review);
+  });
 
 });
 
@@ -68,7 +67,8 @@ function searchBandEvents(artist) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    //print the entire object to console
+    //empty table 
+    $("#events-table").empty();
     console.log(response);
     for (i = 0; i < response.length; i++) {
 
