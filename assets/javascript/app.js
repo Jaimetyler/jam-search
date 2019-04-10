@@ -68,7 +68,7 @@ function searchBandEvents(artist) {
     method: "GET"
   }).then(function(response) {
     //empty table 
-    $("#events-table").empty().hide();
+    $("#events-table").empty();
     console.log(response);
     for (i = 0; i < response.length; i++) {
 
