@@ -122,7 +122,7 @@ function searchBandEvents(artist) {
 
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
-      $("#artist-div").append(artistURL, artistImage, trackerCount, upcomingEvents, goToArtist);
+      $("#artist-div").append(artistURL, artistImage);
     });  
   }  
 
@@ -188,14 +188,14 @@ $.get(
 
 
 function getOutput (item){
-
+ 
   var videoId = item.id.videoId;
-
   var title = item.snippet.title;
   var description = item.snippet.description;
   var thumb = item.snippet.thumbnails.high.url;
   var channelTitle = item.snippet.ChannelTitle;
   var videoDate = item.snippet.publishedAt;
+  var datePretty = moment(videoDate).format("MM/DD/YYYY")
 
   // appends to the html
   var output = '<li>' +
@@ -204,14 +204,14 @@ function getOutput (item){
   '</div>' +
   '<div class="list-right">' +
   '<h3><a class = "iframe" href="http://www.youtube.com/watch/'+videoId+'"target="_blank">'+title+'</a></h3>' +
-  '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
+  '<small>'+datePretty+'</small>' +
   '<p>'+description+'</p>' +
   '</div>'+
   '</li>' +
   '';
 
 
-
+  
 
 
   return output;
