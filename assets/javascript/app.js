@@ -52,9 +52,8 @@ $("#add-review").on("click", function(){
   reviewData.ref().push({
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
-});    
-//Ask Jaime what this code is doing?
-$("form")[0].reset();
+  });
+
 });
 
 //global variable
@@ -68,7 +67,8 @@ function searchBandEvents(artist) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    //print the entire object to console
+    //empty table 
+    $("#events-table").empty();
     console.log(response);
     for (i = 0; i < response.length; i++) {
 
