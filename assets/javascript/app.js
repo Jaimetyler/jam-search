@@ -122,7 +122,7 @@ function searchBandEvents(artist) {
 
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
-      $("#artist-div").append(artistURL, artistImage, trackerCount, upcomingEvents, goToArtist);
+      $("#artist-div").append(artistURL, artistImage);
     });  
   }  
 

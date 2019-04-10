@@ -22,11 +22,6 @@ a{
     text-decoration:none;
 }
 
-#container{
-    width:740px;
-    background:white;
-    margin:auto;
-}
 
 .clearfix{
     clear:both;
