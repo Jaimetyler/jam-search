@@ -44,12 +44,15 @@ var reviewData = firebase.database();
 var review;
 var rating;
 
+
 $("#submit").on("click", function(){
   event.preventDefault();
 
   review = $("#artistReview").val().trim();
+  
 
   reviewData.ref().push({
+    artist: artist,
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
 });    
@@ -60,7 +63,7 @@ console.log(review);
 
 //global variable
 
-var artist = $("#artist-input").val().trim();
+var artist = $("#query").val().trim();
 
 function searchBandEvents(artist) {
   console.log(artist);
@@ -132,76 +135,14 @@ function searchBandEvents(artist) {
     // Preventing the button from trying to submit the form
     event.preventDefault();
     // Storing the artist name
-    var inputArtist = $("#artist-input").val().trim();
+    var inputArtist = $("#query").val().trim();
     console.log(inputArtist)
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
+    search();
   });  
-})  
-
-
-
-
-
-
-console.log("this is a test to the Dom");
-// animates the search bar......
-$(function() {
-
-var searchField = $ ('#query');
-var icon = $('#search-btn');
-
-$(searchField).on('focus', function() {
-
-$(this).animate({
-
-  width:'100%'
-}, 100);
-$(icon).animate({
-
-right: '10px'
-
-}, 100 );
-
-});
-
-$(searchField).on('blur', function() {
-
-  if(searchField.val()== ''){
-
-      $(searchField).animate({
-
-          width: '45%'
-
-
-      }, 100, function() {});
-
-      $(icon).animate({
-
-          right: '360px'
-
-
-      }, 100, function() {});
-
-  }
   
-  });
-
-  //end of the animation of search bar code.......
-
-
-
-
-
-  $('#search-form').submit(function(e){
-
-      e.preventDefault();
-
-  });
-
-})
-
 
 
 function search () {
@@ -266,18 +207,16 @@ function getOutput (item){
   '<img src="'+thumb+'">' +
   '</div>' +
   '<div class="list-right">' +
-  '<h3><a class = "iframe" href="http://www.youtube.com/watch/'+videoId+'">'+title+'</a></h3>' +
+  '<h3><a class = "iframe" href="http://www.youtube.com/watch/'+videoId+'"target="_blank">'+title+'</a></h3>' +
   '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
   '<p>'+description+'</p>' +
   '</div>'+
   '</li>' +
-  '< div class= "clearfix"></div>'+
   '';
 
 
 
-  //old iframe code that didn't work.......
-//<iframe src="https://gifer.com/embed/NgUv" width=480 height=328.800 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">
+
 
   return output;
 
@@ -289,87 +228,4 @@ function getOutput (item){
 }
 
 
-var tag = document.createElement('script');
-
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var videoID;
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    // $('#player').css(hidden);
-    
-    var player; 
-    function onYouTubeIframeAPIReady() {
-      console.log("you working?")
-      player = new YT.Player('youtube-div', {
-        height: '390',
-        width: '640',
-        videoId: videoID,
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-    
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
-    
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-
-    function onPlayerStateChange(event) {
-      if (event.data === -1) {
-        console.log(event.data)
-        $("#youtube-div").hide;
-      } else {
-        document.getElementById("#youtube-div").style.display = "block";
-      }
-    } 
-    function stopVideo() {
-      player.stopVideo();
-    }
-
-  function renderYouTube (videoIDImport) {
-    
-    videoID = videoIDImport
-    console.log(videoID)
-    player.loadVideoById(videoIDImport)
-
-  }
-
-
-
-  function searchYoutube(artist) {
-
-    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoLicense=youtube&q=" + artist + "&key=AIzaSyAhtXj_f5qNBZXU6LiTjrhVTjmQ7Tmk9zQ&videoEmbeddable=true&videoSyndicated=true";
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-
-      // Printing the entire object to console
-      renderYouTube(response.items[0].id.videoId); //this is bringing back the youtube video ID!!
-
-    });
-  }
-  
-
-  // Event handler for user clicking the select-artist button
-  $("#select-artist").on("click", function(event) {
-    // Preventing the button from trying to submit the form
-    event.preventDefault();
-    // Storing the artist name
-    var inputArtist = $("#artist-input").val().trim();
-    
-    // Running the searchBandsInTown function(passing in the artist as an argument)
-    searchYoutube(inputArtist);
-    onPlayerReady();
-
-  });
-
+});
