@@ -39,23 +39,28 @@ var config = {
 firebase.initializeApp(config);
 
 var reviewData = firebase.database();
+//var reviewArtist = firebase.database().ref().key();
 
 //creating variables that will be stored
 var review;
 var rating;
 
-$("#add-review").on("click", function(){
+
+$("#submit").on("click", function(){
   event.preventDefault();
 
-  review = $("#review-input").val().trim();
+  review = $("#artistReview").val().trim();
+  
 
   reviewData.ref().push({
+    artist: artist,
     review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
-});    
-//Ask Jaime what this code is doing?
-$("form")[0].reset();
+  });
+
+console.log(review);
 });
+
 
 //global variable
 
@@ -68,7 +73,8 @@ function searchBandEvents(artist) {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    //print the entire object to console
+    //empty table 
+    $("#events-table").empty();
     console.log(response);
     for (i = 0; i < response.length; i++) {
 
@@ -137,8 +143,9 @@ function searchBandEvents(artist) {
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
     search();
+    
   });  
-})  
+  
 
 
 function search () {
@@ -188,14 +195,14 @@ $.get(
 
 
 function getOutput (item){
-
+ 
   var videoId = item.id.videoId;
-
   var title = item.snippet.title;
   var description = item.snippet.description;
   var thumb = item.snippet.thumbnails.high.url;
   var channelTitle = item.snippet.ChannelTitle;
   var videoDate = item.snippet.publishedAt;
+  var datePretty = moment(videoDate).format("MM/DD/YYYY")
 
   // appends to the html
   var output = '<li>' +
@@ -204,14 +211,14 @@ function getOutput (item){
   '</div>' +
   '<div class="list-right">' +
   '<h3><a class = "iframe" href="http://www.youtube.com/watch/'+videoId+'"target="_blank">'+title+'</a></h3>' +
-  '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
+  '<small>'+datePretty+'</small>' +
   '<p>'+description+'</p>' +
   '</div>'+
   '</li>' +
   '';
 
 
-
+  
 
 
   return output;
@@ -224,3 +231,4 @@ function getOutput (item){
 }
 
 
+});
