@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#youtube-result").hide();
     $("#artist-review").hide();
     $(".wrap").hide();
   
@@ -81,7 +82,7 @@ function searchBandEvents(artist) {
     var eventDate = response[i].datetime;  
     var venueName = response[i].venue.name;
     var location = response[i].venue.city;
-    var ticketURL = response[i].offers[0].url;
+    var ticketURL = response[i].offers[i].url;
 
     var datePretty = moment(eventDate).format("MM/DD/YYYY");
     
@@ -90,9 +91,9 @@ function searchBandEvents(artist) {
       <td> ${datePretty} </td>
       <td> ${venueName} </td>
       <td> ${location} </td>
-      <td> <a href=${ticketURL} target="_blank"> Buy Tickets </a> </td>
+      <td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
 
-      </tr>
+      </tr> 
 
 
     `)  
