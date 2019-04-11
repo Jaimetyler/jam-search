@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#youtube-result").hide();
     $("#artist-review").hide();
     $(".wrap").hide();
   
@@ -90,9 +91,9 @@ function searchBandEvents(artist) {
       <td> ${datePretty} </td>
       <td> ${venueName} </td>
       <td> ${location} </td>
-      <td> <a href=${ticketURL} target="_blank"> Buy Tickets </a> </td>
+      <td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
 
-      </tr>
+      </tr> 
 
 
     `)  
