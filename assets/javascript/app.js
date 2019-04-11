@@ -82,7 +82,7 @@ function searchBandEvents(artist) {
     var eventDate = response[i].datetime;  
     var venueName = response[i].venue.name;
     var location = response[i].venue.city;
-    var ticketURL = response[i].offers[i].url;
+    var ticketURL = response[i].offers[0].url;
 
     var datePretty = moment(eventDate).format("MM/DD/YYYY");
     
