@@ -82,7 +82,7 @@ function searchBandEvents(artist) {
     var eventDate = response[i].datetime;  
     var venueName = response[i].venue.name;
     var location = response[i].venue.city;
-    var ticketURL = response[i].offers[i].url;
+    var ticketURL = response[i].offers[0].url;
 
     var datePretty = moment(eventDate).format("MM/DD/YYYY");
     
@@ -126,6 +126,9 @@ function searchBandEvents(artist) {
       var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
       var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
       var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      $("#facebook").attr("href", response.url)
+      
+
 
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
@@ -164,7 +167,7 @@ $.get(
       part: 'snippet, id',
       q: q,
       type:'video',
-      key: 'AIzaSyBErNCwXMuc9gBSW2WMQbmw8lHuaHsy8mM'},
+      key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'},
 
       function(data) {
           var nextPageToken = data.nextPageToken;
@@ -223,13 +226,17 @@ function getOutput (item){
 
 
   return output;
-
+  href="https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
 
 
 
 
 
 }
+function addFacebook (){
 
+  
+
+}
 
 });
