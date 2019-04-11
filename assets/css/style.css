@@ -4,22 +4,22 @@
     margin:0;
 }
 
-
-
 body{
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6em;
     color:#666;
-    background-image:url(../images/audience\ darker.png);
+    background-image:url(../images/audience.jpg);
     background-size: cover;
     font-size:14px;
 }
 
-a {
+#youtube-div {
+    display: none;
+}
+a{
     color:#333;
     text-decoration:none;
-
 }
 
 #container{
