@@ -52,7 +52,10 @@ $("#submit").on("click", function(){
   event.preventDefault();
 
   review = $("#artistReview").val().trim();
+
+  //how can i make this a parent in the data tree?????
   artistSearched = $("#query").val().trim();
+
 
   reviewData.ref().push({
     artistSearched: artistSearched,
@@ -61,14 +64,11 @@ $("#submit").on("click", function(){
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   });
 
-  for (i = 0; i < reviewData.length; i++) {
-    if (artistSearched==="will smith") {
-      console.log(review);
-    }
-  }
+ //can i loop through this and append each review that finds the searched artist?
 
-//console.log(artistSearched);
-//console.log(review);
+
+console.log(artistSearched);
+console.log(review);
 });
 
 
