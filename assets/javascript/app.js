@@ -1,9 +1,6 @@
-$(document).ready(function () {
-  $("#artist-review").hide();
-  $(".wrap").hide();
-
-  $("#submit").on("click", function () {
-
+$(document).ready(function(){
+    $("#youtube-result").hide();
+    $("#artist-review").hide();
     $(".wrap").hide();
     $(".img").show();
     //$(code to send to firebase).????();
@@ -108,9 +105,9 @@ $(document).ready(function () {
       <td> ${datePretty} </td>
       <td> ${venueName} </td>
       <td> ${location} </td>
-      <td> <a href=${ticketURL} target="_blank"> Buy Tickets </a> </td>
+      <td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
 
-      </tr>
+      </tr> 
 
 
     `)
@@ -143,12 +140,15 @@ $(document).ready(function () {
       var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
       var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
       var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      $("#facebook").attr("href", response.url)
+      
+
 
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
-      $("#artist-div").append(artistURL, artistImage, trackerCount, upcomingEvents, goToArtist);
-    });
-  }
+      $("#artist-div").append(artistURL, artistImage);
+    });  
+  }  
 
   // Event handler for user clicking the select-artist button
   $("#select-artist").on("click", function (event) {
@@ -213,41 +213,44 @@ $(document).ready(function () {
   };
 
 
-  function getOutput(item) {
+function getOutput (item){
+ 
+  var videoId = item.id.videoId;
+  var title = item.snippet.title;
+  var description = item.snippet.description;
+  var thumb = item.snippet.thumbnails.high.url;
+  var channelTitle = item.snippet.ChannelTitle;
+  var videoDate = item.snippet.publishedAt;
+  var datePretty = moment(videoDate).format("MM/DD/YYYY")
 
-    var videoId = item.id.videoId;
-
-    var title = item.snippet.title;
-    var description = item.snippet.description;
-    var thumb = item.snippet.thumbnails.high.url;
-    var channelTitle = item.snippet.ChannelTitle;
-    var videoDate = item.snippet.publishedAt;
-
-    // appends to the html
-    var output = '<li>' +
-      '<div class = "list-left">' +
-      '<img src="' + thumb + '">' +
-      '</div>' +
-      '<div class="list-right">' +
-      '<h3><a class = "iframe" href="http://www.youtube.com/watch/' + videoId + '"target="_blank">' + title + '</a></h3>' +
-      '<small>By <span class="cTitle">' + channelTitle + '</span> on ' + videoDate + '</small>' +
-      '<p>' + description + '</p>' +
-      '</div>' +
-      '</li>' +
-      '';
-
-
+  // appends to the html
+  var output = '<li>' +
+  '<div class = "list-left">' +
+  '<img src="'+thumb+'">' +
+  '</div>' +
+  '<div class="list-right">' +
+  '<h3><a class = "iframe" href="http://www.youtube.com/watch/'+videoId+'"target="_blank">'+title+'</a></h3>' +
+  '<small>'+datePretty+'</small>' +
+  '<p>'+description+'</p>' +
+  '</div>'+
+  '</li>' +
+  '';
 
 
-
-    return output;
-
+  
 
 
+  return output;
+  href="https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
 
 
 
-  }
 
 
-});
+}
+function addFacebook (){
+
+  
+
+}
+
