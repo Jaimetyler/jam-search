@@ -164,7 +164,7 @@ $.get(
       part: 'snippet, id',
       q: q,
       type:'video',
-      key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'},
+      key: 'AIzaSyBErNCwXMuc9gBSW2WMQbmw8lHuaHsy8mM'},
 
       function(data) {
           var nextPageToken = data.nextPageToken;
