@@ -82,7 +82,7 @@ function searchBandEvents(artist) {
     var eventDate = response[i].datetime;  
     var venueName = response[i].venue.name;
     var location = response[i].venue.city;
-    var ticketURL = response[i].offers[i].url;
+    var ticketURL = response[i].offers[0].url;
 
     var datePretty = moment(eventDate).format("MM/DD/YYYY");
     
@@ -167,7 +167,7 @@ $.get(
       part: 'snippet, id',
       q: q,
       type:'video',
-      key: 'AIzaSyBErNCwXMuc9gBSW2WMQbmw8lHuaHsy8mM'},
+      key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'},
 
       function(data) {
           var nextPageToken = data.nextPageToken;
