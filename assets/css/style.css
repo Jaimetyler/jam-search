@@ -17,16 +17,12 @@ body{
 #youtube-div {
     display: none;
 }
-a{
+.iframe{
     color:#333;
     text-decoration:none;
+    
 }
 
-#container{
-    width:740px;
-    background:white;
-    margin:auto;
-}
 
 .clearfix{
     clear:both;
@@ -87,6 +83,7 @@ margin: 0 auto;
     padding: 10px 0;
     list-style:none;
     overflow:auto;
+    background-color: whitesmoke;
 }
 
 .list-left{
@@ -195,8 +192,14 @@ margin: 0 auto;
         bottom: 151px;
     }
 
+#events-table {
+    margin: auto;
+    padding: auto;
 
-
+}
+a:hover {
+    color: rgb(50, 50, 181)
+}
 
 
 
