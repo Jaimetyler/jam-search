@@ -30,7 +30,8 @@ body{
 
 header{
     padding:30px 20px;
-    background: #f4f4f4;
+   /* background: #f4f4f4; */
+   background-color: rgba(245, 245, 245, 0.747);
 }
 
 header h1{
@@ -54,10 +55,17 @@ section{
 
 footer{
     padding:20px;
-    background:#f4f4f4;
-    text-align:center;
+    /* background:#f4f4f4; */
+    position: fixed;
+   left: 0;
+   bottom: 0px;
+   width: 100%;
+   text-align: center;
+   background-color:  rgba(245, 245, 245, 0.747);
+   
+   
 }
-
+ 
 #search-form{
     display:block;
     margin-bottom:15px;
@@ -113,7 +121,7 @@ margin: 0 auto;
 
 }
 
-#search-btn{
+#select-artist{
     position:absolute;
     right:360px;
     top:1px;

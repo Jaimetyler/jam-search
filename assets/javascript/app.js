@@ -126,6 +126,9 @@ function searchBandEvents(artist) {
       var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
       var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
       var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      $("#facebook").attr("href", response.url)
+      
+
 
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
@@ -223,13 +226,17 @@ function getOutput (item){
 
 
   return output;
-
+  href="https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
 
 
 
 
 
 }
+function addFacebook (){
 
+  
+
+}
 
 });
