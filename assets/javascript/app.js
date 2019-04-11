@@ -38,27 +38,37 @@ var config = {
 };  
 firebase.initializeApp(config);
 
-var reviewData = firebase.database();
+const reviewData = firebase.database(artist);
+
+//var key = reviewData.key;
 //var reviewArtist = firebase.database().ref().key();
 
 //creating variables that will be stored
-var review;
-var rating;
+var artistSearched;
+var numberOfSearches = 0;
 
 
 $("#submit").on("click", function(){
   event.preventDefault();
 
   review = $("#artistReview").val().trim();
-  
+  artistSearched = $("#query").val().trim();
 
   reviewData.ref().push({
-    artist: artist,
-    review: review,
+    artistSearched: artistSearched,
+   // numberOfSearches: numberOfSearches,
+   review: review,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
   });
 
-console.log(review);
+  for (i = 0; i < reviewData.length; i++) {
+    if (artistSearched==="will smith") {
+      console.log(review);
+    }
+  }
+
+//console.log(artistSearched);
+//console.log(review);
 });
 
 
