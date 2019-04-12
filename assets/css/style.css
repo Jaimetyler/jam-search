@@ -1,7 +1,6 @@
 
 .container {
     margin-bottom: 100pt;
-
 }
 
 *{
@@ -13,7 +12,7 @@ body{
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6em;
-    color:#666;
+    color:rgb(20, 20, 20);
     background-image:url(../images/audience.jpg);
     
     font-size:14px;
@@ -69,6 +68,7 @@ footer{
    width: 100%;
    text-align: center;
    background-color:  rgba(245, 245, 245, 0.747);
+   z-index: -1;
    
    
 }
@@ -98,7 +98,7 @@ margin: 0 auto;
     padding: 10px 0;
     list-style:none;
     overflow:auto;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
 }
 
 .list-left{
