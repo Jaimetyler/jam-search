@@ -1,4 +1,9 @@
 
+.container {
+    margin-bottom: 100pt;
+
+}
+
 *{
     padding:0;
     margin:0;
@@ -32,6 +37,7 @@ header{
     padding:30px 20px;
    /* background: #f4f4f4; */
    background-color: rgba(245, 245, 245, 0.747);
+   border-radius: 10px;
 }
 
 header h1{
@@ -210,7 +216,9 @@ a:hover {
 }
 
 
-
+img {
+    border-radius: 10px;
+}
 
 
 
