@@ -214,7 +214,13 @@ a:hover {
 }
 
 
-
+#artist-div {
+    text-align: center; 
+}
+@media (max-width: 992px) {
+   
+	
+}
 
 
 
