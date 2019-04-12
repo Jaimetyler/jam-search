@@ -26,6 +26,28 @@
             <h1>Search:<span>Project X</span></h1>
             <p>Search music from all of your favorite bands</p>
             <p>Enter your favorite artist to search</p>
+
+            <section>
+                <form id="search-form" name="search-form">
+                  <div class="input-group mb-3">
+                    <input type="search" id="query" class=" form-control" placeholder="search youtube...">
+                    <div class="input-group-append">
+                    <input id="select-artist" class="btn" type="submit" value="">
+                    </div>
+                  </div>
+                  
+            </form>
+            
+            
+            <ul id="results"></ul>
+            <div id="buttons"></div>
+          </section>
+
+
+   
+
+
+
             <!--Comment Box Code-->
   <div class="wrap">
     
@@ -70,18 +92,7 @@
             
           </header>
           
-          <section>
-            <form id="search-form" name="search-form">
-              <div class="fieldcontainer">
-                <input type="search" id="query" class="search-field" placeholder="search youtube..."><input id="select-artist" type="submit" value="">
-              </div>
-              
-        </form>
-        
-        
-        <ul id="results"></ul>
-        <div id="buttons"></div>
-      </section>
+          
     </div>
     <div class="col-lg-3">
       <div id="artist-div"></div>
