@@ -1,7 +1,6 @@
 
 .container {
     margin-bottom: 100pt;
-
 }
 
 *{
@@ -13,9 +12,9 @@ body{
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6em;
-    color:#666;
+    color:rgb(20, 20, 20);
     background-image:url(../images/audience.jpg);
-    background-size: cover;
+    
     font-size:14px;
 }
 
@@ -38,6 +37,7 @@ body{
 }
 
 header{
+    
     padding:30px 20px;
    /* background: #f4f4f4; */
    background-color: rgba(245, 245, 245, 0.747);
@@ -72,6 +72,7 @@ footer{
    width: 100%;
    text-align: center;
    background-color:  rgba(245, 245, 245, 0.747);
+   z-index: -1;
    
    
 }
@@ -101,7 +102,7 @@ margin: 0 auto;
     padding: 10px 0;
     list-style:none;
     overflow:auto;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
 }
 
 .list-left{
@@ -132,16 +133,16 @@ margin: 0 auto;
 }
 
 #select-artist{
-    position:absolute;
-    right:360px;
-    top:1px;
-    height:25px;
-    width:32px;
-    border:0;
-    zoom:1;
-    cursor:pointer;
-    background:transparent url(../images/search.png);
-    background-size: cover;
+   padding:2px;
+   width:32px;
+   left: -41px;
+   cursor:pointer;
+   background:transparent url(../images/search.png);
+   background-size: cover;
+    
+   
+   
+    
    
 }
 
@@ -221,6 +222,7 @@ a:hover {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #artist-div {
     text-align: center; 
 }
@@ -228,10 +230,14 @@ a:hover {
    
 	
 =======
+=======
+
+>>>>>>> 68366eada9bd07b1dda283fca86562cab7e2ab57
 img {
     border-radius: 10px;
 >>>>>>> 5c6519a9e06c425f5f7a3066ac345d6332b87b85
 }
+
 
 
 
