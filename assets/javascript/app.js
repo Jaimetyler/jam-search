@@ -144,8 +144,13 @@ $(document).ready(function () {
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
     search();
+    $("#query").empty();
+  
+    
+  });  
+  
 
-  });
+  
 
 
 
