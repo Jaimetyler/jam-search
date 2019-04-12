@@ -1,4 +1,9 @@
 
+.container {
+    margin-bottom: 100pt;
+
+}
+
 *{
     padding:0;
     margin:0;
@@ -33,6 +38,7 @@ header{
     padding:30px 20px;
    /* background: #f4f4f4; */
    background-color: rgba(245, 245, 245, 0.747);
+   border-radius: 10px;
 }
 
 header h1{
@@ -212,35 +218,11 @@ a:hover {
 
 
 
-@media  screen and (max-width: 980px) {
-    /* For mobile phones: */
-    [class*="body"] {
-      width: 100%;
-    }
-  }
-  
-  @media  screen and (max-width: 768px) {
-    
-    [class*="body"] {
-        width: 100%;
-      }
-    }
-  
-  
-  
-  @media  screen and (max-width: 670px) {
-    /* For mobile phones: */
-    [class*="body"] {
-      width: 100%;
-    }
-  }
-  
-  @media  screen and (max-width: 640px) {
-    /* For mobile phones: */
-    [class*="body"] {
-      width: 100%;
-    }
-  }
+img {
+    border-radius: 10px;
+}
+
+
 
 
 
