@@ -1,16 +1,18 @@
 
 .container {
     margin-bottom: 100pt;
-
+    margin-top: 50px;
+    
 }
 
 *{
     padding:0;
     margin:0;
+   
 }
 
 body{
-    background:url(../images/audience.jpg) no-repeat;
+    background:url(../images/audience\ darker-grayscale.png) no-repeat;
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: block;
@@ -225,6 +227,7 @@ margin: 0 auto;
 #events-table {
     margin: auto;
     padding: auto;
+    display: none;
 
 }
 a:hover {
@@ -240,8 +243,16 @@ img {
 
 }
 
-h1 {
+h1, p {
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    font-family: 'CRASSROOTSAltREG'; 
+    
+}
+
+.col-lg-5 {
+    background-color: #666;
 }
 
 
