@@ -37,7 +37,9 @@ $(document).ready(function(){
 
   var reviewData = firebase.database();
 
-  var key = reviewData.key;
+  //var artistData = database.ref('artists');
+
+  //var key = reviewData.key;
   //var reviewArtist = firebase.database().ref().key();
 
   //creating variables that will be stored
@@ -45,33 +47,34 @@ $(document).ready(function(){
   var numberOfSearches = 0;
 
   function writeReview(artistSearched) {
-      reviewData.ref(artistSearched).set({
+     reviewData.ref(artistSearched).setValue({
       artistSearched: artistSearched,
       review: review,
-      //dataAdded: firebase.database.ServerValue.TIMESTAMP
+      dataAdded: firebase.database.ServerValue.TIMESTAMP
       
     });
-        $("#submit").on("click", function () {
-          event.preventDefault();
-      
-          review = $("#artistReview").val().trim();
-      
-          //how can i make this a parent in the data tree?????
-          artistSearched = $("#query").val().trim();
-      
-          
-          //reviewData.ref().push({
-          //artistSearched: artistSearched,
-          //numberOfSearches: numberOfSearches,
-         //review: review,
-        
-          });
-  console.log("im working")
-  }
-
-
-    //can i loop through this and append each review that finds the searched artist?
+    
    
+  }
+  
+  
+  $("#submit").on("click", function () {
+    event.preventDefault();
+
+    review = $("#artistReview").val().trim();
+
+    //how can i make this a parent in the data tree?????
+    artistSearched = $("#query").val().trim();
+
+    
+    //reviewData.ref().push({
+    //artistSearched: artistSearched,
+    //numberOfSearches: numberOfSearches,
+    //review: review,
+  
+    //});
+    //can i loop through this and append each review that finds the searched artist?
+  });
 
     console.log(artistSearched);
     console.log(review);
