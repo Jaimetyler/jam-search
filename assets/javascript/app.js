@@ -145,7 +145,7 @@ $(document).ready(function () {
     searchBandEvents(inputArtist);
     search();
     $("#search-form")[0].reset();
-  
+    $('#events-table').show();
     
   });  
   
