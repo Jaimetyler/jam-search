@@ -1,7 +1,7 @@
 
 .container {
     margin-bottom: 100pt;
-
+    
 }
 
 *{
@@ -10,15 +10,26 @@
 }
 
 body{
-
+    background:url(../images/audience.jpg) no-repeat;
+    position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
     line-height: 1.6em;
     color:#666;
-    background-image:url(../images/audience.jpg);
     background-size: cover;
     font-size:14px;
 }
 
+body:before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+}
 #youtube-div {
     display: none;
 }
