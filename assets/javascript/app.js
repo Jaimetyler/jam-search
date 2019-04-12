@@ -147,6 +147,8 @@ function searchBandEvents(artist) {
     searchBandsInTown(inputArtist);
     searchBandEvents(inputArtist);
     search();
+    $("#query").empty();
+  
     
   });  
   
