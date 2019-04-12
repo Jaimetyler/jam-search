@@ -27,7 +27,11 @@ body{
     text-decoration:none;
     
 }
-
+#container{
+    width:740px;
+    background:white;
+    margin:auto;
+}
 
 .clearfix{
     clear:both;
@@ -216,8 +220,17 @@ a:hover {
 }
 
 
+<<<<<<< .merge_file_a41580
 img {
     border-radius: 10px;
+=======
+#artist-div {
+    text-align: center; 
+}
+@media (max-width: 992px) {
+   
+	
+>>>>>>> .merge_file_a13184
 }
 
 
