@@ -242,4 +242,9 @@ $(document).ready(function () {
 
   }
 
+  $(window).modal('load', function() {
+    $('.modal-body').modal('show');
+
+  })
+
 });
