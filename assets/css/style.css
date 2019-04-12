@@ -1,4 +1,9 @@
 
+.container {
+    margin-bottom: 100pt;
+
+}
+
 *{
     padding:0;
     margin:0;
@@ -36,6 +41,7 @@ header{
     padding:30px 20px;
    /* background: #f4f4f4; */
    background-color: rgba(245, 245, 245, 0.747);
+   border-radius: 10px;
 }
 
 header h1{
@@ -214,12 +220,17 @@ a:hover {
 }
 
 
+<<<<<<< HEAD
 #artist-div {
     text-align: center; 
 }
 @media (max-width: 992px) {
    
 	
+=======
+img {
+    border-radius: 10px;
+>>>>>>> 5c6519a9e06c425f5f7a3066ac345d6332b87b85
 }
 
 
