@@ -146,12 +146,15 @@ margin: 0 auto;
 }
 
 #select-artist{
+    top:1;
    padding:2px;
+   height: 37;
    width:32px;
-   left: -41px;
+   border:left;
    cursor:pointer;
    background:transparent url(../images/search.png);
    background-size: cover;
+   background-color: white;
     
    
    
