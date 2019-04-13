@@ -9,12 +9,35 @@
   <title>Jam Search</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
 <body>
   <div class="container">
+
+      
+    <div class="myModal" id = "modal">
+      <h3>Thank you for Using Jam Search</h3>
+      <h6>Join our mailing list to receieve updates</h6>
+      <form>
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+        Email:<br>
+        <input type="email" name="email">
+      </form>
+      <button class="submit" id="submitForm">Submit</button> 
+
+
+    </div>
+
+
+
+
+
     <div class="row">
 
       <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-3 order-3">
@@ -28,7 +51,7 @@
 
       </div>
 
-      <div class="col-lg-5 col-sm-12 order-lg-2 order-sm-1 order-1">
+      <div class="col-lg-5 col-sm-12 order-lg-2 order-sm-1 order-1" id = "main-search">
 
             <div id="col-cent">
 

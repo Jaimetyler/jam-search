@@ -243,4 +243,17 @@ $(document).ready(function () {
 
   }
 
+ 
+
+  $(document).on('load', function() {
+    $("#main-search").hide();
+    $('#modal').modal('show');
+
+  })
+      $(".submit").on("click", function(){
+        $("#modal").hide();
+        $("#main-search").show();
+      })
+
+
 });
