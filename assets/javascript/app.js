@@ -28,7 +28,26 @@ $(document).ready(function () {
 
   })
 
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // console.log(email);
+    emailTest = re.test(email);
+    console.log(emailTest);
+  }
+  
+  function validate() {
+    if (emailTest===false){
+      console.log(email + "is not a valid Email");
+      $("#result").html(email + " is not a valid Email");
+    }else{
+      $("#modal").hide();
+      $("#main-search").show();
+     }
 
+     }
+ 
+  
+  
   // Initialize Firebase  
   var config = {
     apiKey: "AIzaSyBFpSgNqrH_XGmnK5tJgp7s-qPlDqe2vUM",
@@ -42,30 +61,35 @@ $(document).ready(function () {
 
   var userInfo = firebase.database();
   //var reviewArtist = firebase.database().ref().key();
-
+  
   //creating variables that will be stored
   var firstName;
   var lastName;
   var email;
-
+  
   //Adds name and email information to the firebase on the submit click
   $(".submit").on("click", function () {
     event.preventDefault();
-
+    
     firstName = $("#firstName-input").val().trim();
     lastName = $("#lastName-input").val().trim();
     email = $("#email-input").val().trim();
-
+    validateEmail(email);
+     validate(email);
+    
+    console.log("test " + email);
     userInfo.ref().push({
       firstName: firstName,
       lastName: lastName,
       email: email
     });
-
+    
     console.log("First Name: " + firstName);
     console.log("Last Name: " + lastName);
     console.log("Email Address: " + email);
-
+    
+    // 
+    
     $(".welcome").append("Welcome  " + firstName)
   });
 
@@ -106,8 +130,8 @@ $(document).ready(function () {
 
     //
   }
-//<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
-//<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
+  //<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
+  //<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
 
   function searchBandsInTown(artist) {
 
@@ -135,7 +159,7 @@ $(document).ready(function () {
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
       $("#artist-div").append(artistURL, artistImage);
-      
+
     });
   }
 
@@ -152,11 +176,11 @@ $(document).ready(function () {
     search();
     $("#search-form")[0].reset();
     $('#events-table').show();
-    
-  });  
-  
 
-  
+  });
+
+
+
 
 
 
@@ -175,7 +199,7 @@ $(document).ready(function () {
         part: 'snippet, id',
         q: q,
         type: 'video',
-        key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'
+        key: 'AIzaSyDlA29Y9uVBzC2-mNFClceSFZoJI0eew3U'
       },
 
       function (data) {
@@ -244,23 +268,30 @@ $(document).ready(function () {
   }
   
 
- 
 
-  $(document).on('load', function() {
+
+  $(document).on('load', function () {
     $("#main-search").hide();
     $('#modal').modal('show');
-
   })
-      $(".submit").on("click", function(){
-        $("#modal").hide();
-        $("#main-search").show();
-      })
 
-      $(".exit").on("click", function(){
-        $("#modal").hide();
-        $("#main-search").show();
-      })
+  // const emailField = $("#email-input").val().trim();
+  // const submitButtom = document.getElementById('submitForm')
 
+  
+
+   
+  // $(".submit").on("click", function () {
+
+    
+  // })
+
+  $(".exit").on("click", function () {
+    $("#modal").hide();
+    $("#main-search").show();
+  })
+
+ 
 
 
 

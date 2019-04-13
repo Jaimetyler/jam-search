@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crass-roots-alt" type="text/css"/>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crass-roots-alt" type="text/css" />
   <title>Jam Search</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -17,21 +19,21 @@
 <body>
   <div class="container-fluid">
 
-      
-    <div class="myModal" id = "modal">
-      <button class = "exit">X</button>
+
+    <div class="myModal" id="modal">
+      <button class="exit">X</button>
       <h3>Thank you for Using Jam Search</h3>
       <h6>Join our mailing list to receieve updates</h6>
       <form>
         First name:<br>
-        <input type="text" name="firstName" id = "firstName-input"><br>
+        <input type="text" name="firstName" id="firstName-input"><br>
         Last name:<br>
-        <input type="text" name="lastName" id = "lastName-input"><br>
+        <input type="text" name="lastName" id="lastName-input"><br>
         Email:<br>
-        <input type="email" name="email" id = "email-input">
+        <input type="email" name="email" id="email-input">
       </form>
-      <button class="submit" id="submitForm">Submit</button> 
-
+      <button class="submit" id="submitForm"  >Submit</button>
+      <div id = "result"></div>
 
     </div>
 
@@ -50,14 +52,14 @@
 
       </div>
 
-      <div class="col-lg-5 order-lg-2 order-sm-1 order-1" id = "main-search">
+      <div class="col-lg-5 col-sm-12 order-lg-2 order-sm-1 order-1" id="main-search">
 
-            <div id="col-cent">
+        <div id="col-cent">
 
-              <h1><span>Jam Search</span></h1>
-              <p class="intro">Search music from all of your favorite bands</p>
-              <p class="intro">Enter your favorite artist to search</p>
-              
+          <h1><span>Jam Search</span></h1>
+          <p class="intro">Search music from all of your favorite bands</p>
+          <p class="intro">Enter your favorite artist to search</p>
+
           <section>
             <form id="search-form" name="search-form">
               <div class="input-group mb-3">
@@ -74,13 +76,13 @@
                 <a href="https://www.youtube.com"> <img alt="youtube" src="assets/images/tube.png" width="40" height="40">
                 </a>
               </div>
-              <p class = "welcome" id = "welcome-message"></p>
-            </div>
-          </form>
+              <p class="welcome" id="welcome-message"></p>
+        </div>
+        </form>
 
 
-          <ul id="results"></ul>
-          <div id="buttons"></div>
+        <ul id="results"></ul>
+        <div id="buttons"></div>
         </section>
       </div>
       <div class="col-lg-3 order-lg-3 order-sm-2 order-2">
