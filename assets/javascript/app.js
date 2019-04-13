@@ -39,27 +39,33 @@ $(document).ready(function () {
   };
   firebase.initializeApp(config);
 
-  var reviewData = firebase.database();
+  var userInfo = firebase.database();
   //var reviewArtist = firebase.database().ref().key();
 
   //creating variables that will be stored
-  var review;
-  var artistSearched;
+  var firstName;
+  var lastName;
+  var email;
 
 
-  $("#submit").on("click", function () {
+  $(".submit").on("click", function () {
     event.preventDefault();
 
-    review = $("#artistReview").val().trim();
-    artistSearched = $("#query").val().trim();
+    firstName = $("#firstName-input").val().trim();
+    lastName = $("#lastName-input").val().trim();
+    email = $("#email-input").val().trim();
 
-    reviewData.ref().push({
-      artistSearched: artistSearched,
-      review: review,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
+    userInfo.ref().push({
+      firstName: firstName,
+      lastName: lastName,
+      email: email
     });
 
-    console.log(review);
+    console.log("First Name: " + firstName);
+    console.log("Last Name: " + lastName);
+    console.log("Email Address: " + email);
+
+    $(".welcome").append("Welcome, " + firstName)
   });
 
 

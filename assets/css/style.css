@@ -254,9 +254,11 @@ h1 {
     display : none;
 }
 
-
-
-
+.welcome {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
 
 
 
