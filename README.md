@@ -1,56 +1,63 @@
 # Jam Search
 
-This was my first Javascript Project where I had to build something that was interactive and dynamic. I decided to go with a Game of Thrones Theme for this.
+##Developer Team
+*Corey Yates
+*Jay Groover
+*Jaime Tyler
+*Bruce Chamblee
 
-### Getting Started
-This project is designed to be ran in the browser without having to install any programs. I have not added media queries to this so playing this on a mobile device is not recommended. 
+##Description
+This was our first group project between the four of us where we would need to utilize GIT Branch management and file collaboration. We decided to make a web app that had a polished front end and UI experience along with building in some AJAX calls through YouTube and Bands in Town.  
 
-### Design
-The programing that was used to design this project waas:
-Javascript - Funcationality
-HTML - Content and layout
-CSS/Bootstrap - Colorr, layout, and some of activities that are triggered by the Javascript.
+## Getting Started
+This project is designed to be ran in the browser without having to install any programs. We have installed added media queries so the user experience can flow easily on a mobile device.  
 
-### Versioning
-I have only made one version of this. 
+## Design
+The programing that was used to design this project was:
+Javascript/JQuery - Funcationality, AJAX call/API's, and On Click Events
+Firebase - Database that stores the users information and email so they can receive updates. We are currently receiving this information but not sending it anywhere as of now. 
+HTML - Content, layout, and anchor divs.
+CSS/Bootstrap - Color, layout, and some of activities that are triggered by the Javascript.
 
-### HTML
+## Versioning
+We have only made one version of this to be deployed. 
 
-In the HTML, I have a container that is holding two large columns. 
+## HTML
 
-One the left side, I have 2 images that are set with a CSS Style of None. When the game is played, I have created a Javascript function which will look for the result of the win or lose and based of the result respectively, it will add an image for a win or a less along with a message to "click any key to play again".
+In the HTML, we have a container that is holding 3 large columns that are hidden on page load and a modal that is displayed until the user selects to close it which triggers the center "search box" to display. 
 
-On the right side, I have 9 rows which will list some messages to play the game,a list of the total wins, current word, remaining guesses, and guessed letters. 
+One the left side, we have a hidden column which appears when the user searches their artist/band in the search field. When the column appears, it shows a table that has upcoming events where the band/artist is playing. It also allows the user to click a "pill" we have that will connect the user to buy tickets. 
 
-### CSS
-The CSS was very basic. I have a background image that is scaled to the browser width. I have aligned the content to the center of the container. Also, as stated above, I have a couple of items I have set to a display of hidden that will be changed based on the users score. 
+The center column is the main operating column of the page. This holds the search field, and displays the Youtube Search results and appends them below the main box. 
 
-### Javascript
-For the Javascript, I created numerous variables. 
+We also nested 3 clickable icons. One for Facebook which takes you to our Facebook Jam Search Page, a Bands in Town Icon which also takes you to the artist you searched Web Page, and a link to go to YouTube. 
 
-#### Variables
-*Selectable Words - Words for the game
-*Max Tries - the amount of incorrect letters a user can select before they lose.
-*Guess Letters - This is an empty array that will contain the letters that were guessed.
-*Current Word Index - is used in the function to select the random word. 
-*Guessing Word - This is an empty array that will container the letters the user guessed correctly.
-*Remaining guesses - a countdown of the number of guesses remaining.
-*has Finished - is used to start the game. Default is false until a user presses a key.
-*wins - Stores how many wins a user has. 
+The thrid column holds the name of the artist and a picture of them returned from the API call to Bands in Town. The artist name will also hold a clickable link to the artist Bands in town Web Page. 
 
-#### Fuctions
-resetGame - This function sets the remaining guesses to the max tries, it selects the word at random, it pushes the guess letters into the array and adds the number of "_" for the word chosen, and updates the left container if a user wins or loses when the game is reset to a display of none. 
+## CSS
+In the CSS, we utilized some bootstrap benefits to make the grid layout and do some order changes with media queries. We set the background image and added some typography for the text. We added some pseudo code for a gradient for the page (shout out to Bobby from another group for help on this) and we styled some cursors and buttons. 
 
-updateDisplay - This function adds the number of wins to the Total Wins field, adds the letters that were guess and posts them as text to the users screen to be seen. 
+## Javascript
+For the Javascript, we created numerous variables. 
 
-Evaluate Guess - This function is the logic of the game. It checks the arrays for the word guess and runs and if/else statement to send the letter to the correct array to be contained. 
+### API calls
+We made 3 AJAX calls:
+Bands in Town (2) and Youtube. 
+#####Bands in town we are returning the following:
 
-Check Win - This function checks to see if the user wins and if so, it adds a number to the win column, it updates the image on the left side container with the win image, and tells the user to press any key to reset.
+For the table in the left column left
+*Event Date 
+*Venue Name 
+*Venue Location
+*Ticket URL - pushing to the pill we added.
 
-Check Loss - This function checks to see if the user loses and if so, it updates the image on the left side container with the gameover image, and tells the user to press any key to reset.
+For the Column on the right
+We are returning a picture of the artist along with adding a clickable link to the bands we page. We also are pushing this link to the Bands in Town Icon which will take you to the band you searched Bands in Town Web Page. 
 
-make Guess - This function takes the users guess and compares it to remaining guesses left and if there is guesses available, it updates the letter to the function of Evaluate Guess as it has updated the "letter" variable. 
+#####YouTube we are returning the following:
+We are sending Youtube the name of the artist that you searched and bringing back 5 video results. We initially wanted to embed the video into our page but YouTube doesn't allow some artist to be embeded. So we elected to make a target function which will open the Youtube result on their page. 
 
-Event Function - This function tells the system if the game is active and the user presses a key, to make sure the letter is an uppercase and run updatedisplay, checkwins, checkloss functions.
+###Firebase
+In Firebase, we have mapped the user info to they entered on the intial modal that was loaded. We then call back the users name and append it to the search box on the page which welcomes them. 
 
-This was my first README.md. 
+
