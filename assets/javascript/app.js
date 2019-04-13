@@ -1,16 +1,17 @@
 $(document).ready(function () {
+  //default state
   $("#youtube-result").hide();
   $("#artist-review").hide();
   $(".wrap").hide();
-
+  //On Click for Modal to Hide on Submit Click
   $("#submit").on("click", function () {
 
     $(".wrap").hide();
     $(".img").show();
-    //$(code to send to firebase).????();
     $("#textarea").val('');
     $("#review").show();
   })
+  //On Click to Close the Modal on the X
   $("#close").on("click", function () {
 
     $(".wrap").hide();
@@ -18,7 +19,7 @@ $(document).ready(function () {
     $("#review").show();
 
   })
-
+  //Ask Jaime?
   $(".img").on("click", function () {
 
     $(".wrap").show();
@@ -47,7 +48,7 @@ $(document).ready(function () {
   var lastName;
   var email;
 
-
+  //Adds name and email information to the firebase on the submit click
   $(".submit").on("click", function () {
     event.preventDefault();
 
@@ -69,7 +70,6 @@ $(document).ready(function () {
   });
 
 
-  //global variable
 
   var artist = $("#query").val().trim();
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
     <td> ${datePretty} </td>
     <td> ${venueName} </td>
     <td> ${location} </td>
-    <td> <a class="badge badge-pill badge-dark" href=${ticketURL}target="_blank">Buy Tickets</a></td>
+    <td> <a class="badge badge-pill badge-dark" href=${ticketURL}target="_blank">Buy</a></td>
     </tr> 
   `)
       }
@@ -126,9 +126,8 @@ $(document).ready(function () {
       var artistName = $("<h1>").text(response.name);
       var artistURL = $("<a>").attr("href", response.url).append(artistName);
       var artistImage = $("<img>").attr("src", response.thumb_url);
-      var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
-      var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
-      var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      
+     
       $("#bit").attr("href", response.url);
 
 
@@ -236,18 +235,18 @@ $(document).ready(function () {
 
 
     return output;
-    href = "https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
+    //href = "https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
 
 
 
 
 
   }
-  function addFacebook() {
+  //function addFacebook() {
 
 
 
-  }
+  //}
 
  
 
