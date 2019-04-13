@@ -91,7 +91,7 @@ $(document).ready(function () {
     <td> ${datePretty} </td>
     <td> ${venueName} </td>
     <td> ${location} </td>
-    <td> <a class="badge badge-pill badge-dark" href=${ticketURL}target="_blank">Buy Tickets</a></td>
+    <td> <a class="badge badge-pill badge-dark" href=${ticketURL}target="_blank">Buy</a></td>
     </tr> 
   `)
       }
@@ -120,9 +120,8 @@ $(document).ready(function () {
       var artistName = $("<h1>").text(response.name);
       var artistURL = $("<a>").attr("href", response.url).append(artistName);
       var artistImage = $("<img>").attr("src", response.thumb_url);
-      var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
-      var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
-      var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      
+     
       $("#bit").attr("href", response.url);
 
 
