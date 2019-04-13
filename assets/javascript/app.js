@@ -68,11 +68,7 @@ $(document).ready(function () {
 
     $(".welcome").append("Welcome  " + firstName)
   });
-
-
-
-  var artist = $("#query").val().trim();
-
+  //Run Bands in Town API and populate the events chart
   function searchBandEvents(artist) {
     console.log(artist);
     var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=47972149c9ef95f0470de3a7f2d73af9&date=upcoming";
@@ -106,9 +102,7 @@ $(document).ready(function () {
 
     //
   }
-//<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
-//<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
-
+  //Run Bands in Town API for Artist Information and Picture
   function searchBandsInTown(artist) {
 
     // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
@@ -126,9 +120,7 @@ $(document).ready(function () {
       var artistName = $("<h1>").text(response.name);
       var artistURL = $("<a>").attr("href", response.url).append(artistName);
       var artistImage = $("<img>").attr("src", response.thumb_url);
-      var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
-      var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
-      var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      
       $("#bit").attr("href", response.url);
 
 
@@ -160,7 +152,7 @@ $(document).ready(function () {
   
 
 
-
+  //Function for Youtube Search
   function search() {
 
     $('#results').html('');
@@ -207,7 +199,7 @@ $(document).ready(function () {
     );
   };
 
-
+  //creates chart of youtube results
   function getOutput(item) {
 
     var videoId = item.id.videoId;
@@ -250,7 +242,7 @@ $(document).ready(function () {
   }
 
  
-
+  //brings up the modal on page load
   $(document).on('load', function() {
     $("#main-search").hide();
     $('#modal').modal('show');
