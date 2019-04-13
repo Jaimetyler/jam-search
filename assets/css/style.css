@@ -250,6 +250,9 @@ h1 {
     margin-bottom: 10px;
 }
 
+#main-search {
+    display : none;
+}
 
 
 
