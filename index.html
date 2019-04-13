@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crass-roots-alt" type="text/css" />
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crass-roots-alt" type="text/css"/>
   <title>Jam Search</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,71 +53,35 @@
 
       <div class="col-lg-5 col-sm-12 order-lg-2 order-sm-1 order-1">
 
-        <!--<div id="container">-->
-        <!--commented out--<header>-->
-        <h1>Search:<span>Project X</span></h1>
-        <p>Search music from all of your favorite bands</p>
-        <p>Enter your favorite artist to search</p>
+            <div id="col-cent">
 
-        <section>
-          <form id="search-form" name="search-form">
-            <div class="input-group mb-3">
-              <input type="search" id="query" class=" form-control" placeholder="search youtube...">
-              <div class="input-group-append">
-                <input id="select-artist" class="btn" type="submit" value="">
+              <h1>Search:<span>Project X</span></h1>
+              <p class="intro">Search music from all of your favorite bands</p>
+              <p class="intro">Enter your favorite artist to search</p>
+              
+          <section>
+            <form id="search-form" name="search-form">
+              <div class="input-group mb-3">
+                <input type="search" id="query" class=" form-control" placeholder="search your favorite bands...">
+                <div class="input-group-append">
+                  <input id="select-artist" class="btn" type="submit" value="">
+                </div>
+              </div>
+              <div class="icons">
+                <a href="https://facebook.com"> <img alt="W3Schools" src="assets/images/facebook.png" width="40" height="40">
+                </a>
+                <a id="bit"> <img alt="W3Schools" src="assets/images/bit.png" width="40" height="40">
+                </a>
+                <a href="https://www.youtube.com"> <img alt="W3Schools" src="assets/images/tube.png" width="40" height="40">
+                </a>
               </div>
             </div>
-
           </form>
 
 
           <ul id="results"></ul>
           <div id="buttons"></div>
         </section>
-        <!--commented out</header>-->
-
-
-
-
-
-        <!--Comment Box Code-->
-        <!-- <div class="wrap">
-
-          <div class="title">
-            <h4>Jam Search Band Reviews</h4>
-          </div>
-
-          <div class="box">
-            <form id="search-form" name="search-form" onsubmit="return search()">
-              <textarea id="artistReview" rows="5" cols="75">Add a review</textarea>
-            </form>
-          </div>
-
-          <div id="comment"></div>
-          <div class="bottom">
-            <button id="close">Close</button>
-
-            <button id="submit">
-              Submit
-            </button>
-
-          </div>
-        </div>
-        <img class="img" src="assets/images/comments2.png" alt="place holder"
-          style="width:50px; max-width:100%; height: 50px; max-height: 100%">
-        <p id="review">Click to leave a Review</p>
-
-
-
-
-
-        <section>
-
-
-          <ul id="results"></ul>
-          <div id="buttons"></div>
-        </section> -->
-
       </div>
       <div class="col-lg-3 col-sm-12 order-lg-3 order-sm-2 order-2">
 
@@ -127,26 +92,8 @@
     </div>
 
 
-    <!-- Artist Information -->
-
-
-
-
-
-
-  </div>
   </div>
 
-
-  <footer>
-    <a href="https://facebook.com"> <img alt="W3Schools" src="assets/images/facebook.png" width="40" height="40">
-    </a>
-    <a id="facebook"> <img alt="W3Schools" src="assets/images/bit.png" width="40" height="40">
-    </a>
-    <a href="https://www.youtube.com"> <img alt="W3Schools" src="assets/images/tube.png" width="40" height="40">
-    </a>
-    <p>Copyright &copy; 2019, Project X</p>
-  </footer>
   <!-- scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>

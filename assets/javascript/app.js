@@ -123,7 +123,7 @@ $(document).ready(function () {
       var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
       var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
       var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
-      $("#facebook").attr("href", response.url)
+      $("#bit").attr("href", response.url);
 
 
 
