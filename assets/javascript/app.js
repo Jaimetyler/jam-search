@@ -91,17 +91,17 @@ $(document).ready(function () {
     <td> ${datePretty} </td>
     <td> ${venueName} </td>
     <td> ${location} </td>
-    <td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
+    <td> <a class="badge badge-pill badge-dark" href=${ticketURL}target="_blank">Buy Tickets</a></td>
     </tr> 
   `)
       }
 
     });
 
-
+    //
   }
-
-
+//<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
+//<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
 
   function searchBandsInTown(artist) {
 
@@ -130,6 +130,7 @@ $(document).ready(function () {
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
       $("#artist-div").append(artistURL, artistImage);
+      
     });
   }
 
