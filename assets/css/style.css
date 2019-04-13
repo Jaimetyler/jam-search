@@ -276,7 +276,9 @@ h1 {
     padding: 2px;
     
 }
-
+.submit:active {
+    background-color: white;
+}
 
 
 
