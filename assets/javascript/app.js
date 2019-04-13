@@ -242,9 +242,16 @@ $(document).ready(function () {
 
   }
 
-  $(window).modal('load', function() {
-    $('.modal-body').modal('show');
+ 
 
+  $(document).on('click', function() {
+    $('#modal').modal('show');
+
+    
   })
+      $(".submit").on("click", function(){
+        $("#modal").hide();
+      })
+
 
 });
