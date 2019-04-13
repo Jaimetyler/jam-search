@@ -39,27 +39,33 @@ $(document).ready(function () {
   };
   firebase.initializeApp(config);
 
-  var reviewData = firebase.database();
+  var userInfo = firebase.database();
   //var reviewArtist = firebase.database().ref().key();
 
   //creating variables that will be stored
-  var review;
-  var artistSearched;
+  var firstName;
+  var lastName;
+  var email;
 
 
-  $("#submit").on("click", function () {
+  $(".submit").on("click", function () {
     event.preventDefault();
 
-    review = $("#artistReview").val().trim();
-    artistSearched = $("#query").val().trim();
+    firstName = $("#firstName-input").val().trim();
+    lastName = $("#lastName-input").val().trim();
+    email = $("#email-input").val().trim();
 
-    reviewData.ref().push({
-      artistSearched: artistSearched,
-      review: review,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
+    userInfo.ref().push({
+      firstName: firstName,
+      lastName: lastName,
+      email: email
     });
 
-    console.log(review);
+    console.log("First Name: " + firstName);
+    console.log("Last Name: " + lastName);
+    console.log("Email Address: " + email);
+
+    $(".welcome").append("Welcome  " + firstName)
   });
 
 
@@ -91,17 +97,17 @@ $(document).ready(function () {
     <td> ${datePretty} </td>
     <td> ${venueName} </td>
     <td> ${location} </td>
-    <td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
+    <td> <a class="badge badge-pill badge-dark" href=${ticketURL}target="_blank">Buy Tickets</a></td>
     </tr> 
   `)
       }
 
     });
 
-
+    //
   }
-
-
+//<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
+//<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
 
   function searchBandsInTown(artist) {
 
@@ -130,6 +136,7 @@ $(document).ready(function () {
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
       $("#artist-div").append(artistURL, artistImage);
+      
     });
   }
 
@@ -241,5 +248,25 @@ $(document).ready(function () {
 
 
   }
+
+ 
+
+  $(document).on('load', function() {
+    $("#main-search").hide();
+    $('#modal').modal('show');
+
+  })
+      $(".submit").on("click", function(){
+        $("#modal").hide();
+        $("#main-search").show();
+      })
+
+      $(".exit").on("click", function(){
+        $("#modal").hide();
+        $("#main-search").show();
+      })
+
+
+
 
 });
