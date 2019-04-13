@@ -19,7 +19,7 @@ $(document).ready(function () {
     $("#review").show();
 
   })
-  //Ask Jaime?
+  
   $(".img").on("click", function () {
 
     $(".wrap").show();
