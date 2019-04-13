@@ -28,7 +28,26 @@ $(document).ready(function () {
 
   })
 
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // console.log(email);
+    emailTest = re.test(email);
+    console.log(emailTest);
+  }
+  
+  function validate() {
+    if (emailTest===false){
+      console.log(email + "is not a valid Email");
+      $("#result").html(email + " is not a valid Email");
+    }else{
+      $("#modal").hide();
+      $("#main-search").show();
+     }
 
+     }
+ 
+  
+  
   // Initialize Firebase  
   var config = {
     apiKey: "AIzaSyBFpSgNqrH_XGmnK5tJgp7s-qPlDqe2vUM",
@@ -55,7 +74,10 @@ $(document).ready(function () {
     firstName = $("#firstName-input").val().trim();
     lastName = $("#lastName-input").val().trim();
     email = $("#email-input").val().trim();
+    validateEmail(email);
+     validate(email);
     
+    console.log("test " + email);
     userInfo.ref().push({
       firstName: firstName,
       lastName: lastName,
@@ -66,10 +88,7 @@ $(document).ready(function () {
     console.log("Last Name: " + lastName);
     console.log("Email Address: " + email);
     
-    $("#modal").hide();
-    $("#main-search").show();
-    console.log("test" + email);
-    validateEmail(email);
+    // 
     
     $(".welcome").append("Welcome  " + firstName)
   });
@@ -180,7 +199,7 @@ $(document).ready(function () {
         part: 'snippet, id',
         q: q,
         type: 'video',
-        key: 'AIzaSyAuU2FUW6RgwQSKOnI0TQDGGkJxBG81ksA'
+        key: 'AIzaSyDlA29Y9uVBzC2-mNFClceSFZoJI0eew3U'
       },
 
       function (data) {
@@ -276,16 +295,7 @@ $(document).ready(function () {
     $("#main-search").show();
   })
 
-  function validateEmail(emailField) 
-{
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
-}
-
+ 
 
 
 
