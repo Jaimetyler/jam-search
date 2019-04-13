@@ -229,6 +229,7 @@ margin: 0 auto;
     display: none;
     overflow: auto;
     background-color: white;
+    border: 1px;
 
 }
 a:hover {
