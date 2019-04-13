@@ -7,9 +7,9 @@
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crass-roots-alt" type="text/css"/>
   <title>Jam Search</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -19,15 +19,16 @@
 
       
     <div class="myModal" id = "modal">
+      <button class = "exit">X</button>
       <h3>Thank you for Using Jam Search</h3>
       <h6>Join our mailing list to receieve updates</h6>
       <form>
         First name:<br>
-        <input type="text" name="firstname"><br>
+        <input type="text" name="firstName" id = "firstName-input"><br>
         Last name:<br>
-        <input type="text" name="lastname"><br>
+        <input type="text" name="lastName" id = "lastName-input"><br>
         Email:<br>
-        <input type="email" name="email">
+        <input type="email" name="email" id = "email-input">
       </form>
       <button class="submit" id="submitForm">Submit</button> 
 
@@ -55,7 +56,7 @@
 
             <div id="col-cent">
 
-              <h1>Search:<span>Project X</span></h1>
+              <h1><span>Jam Search</span></h1>
               <p class="intro">Search music from all of your favorite bands</p>
               <p class="intro">Enter your favorite artist to search</p>
               
@@ -75,6 +76,7 @@
                 <a href="https://www.youtube.com"> <img alt="W3Schools" src="assets/images/tube.png" width="40" height="40">
                 </a>
               </div>
+              <p class = "welcome" id = "welcome-message"></p>
             </div>
           </form>
 
