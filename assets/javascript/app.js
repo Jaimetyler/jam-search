@@ -261,5 +261,12 @@ $(document).ready(function () {
         $("#main-search").show();
       })
 
+      $(".exit").on("click", function(){
+        $("#modal").hide();
+        $("#main-search").show();
+      })
+
+
+
 
 });

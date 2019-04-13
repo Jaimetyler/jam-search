@@ -269,7 +269,13 @@ h1 {
     margin-top: 5px;
 }
 
-
+.exit {
+    background-color: white;
+    font-weight: bold;
+    border: none;
+    padding: 2px;
+    
+}
 
 
 
