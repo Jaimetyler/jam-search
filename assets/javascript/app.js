@@ -230,17 +230,17 @@ $(document).ready(function () {
 
 
     return output;
-    href = "https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
+    //href = "https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
 
 
 
 
 
   }
-  function addFacebook() {
+  //function addFacebook() {
 
 
 
-  }
+  //}
 
 });
