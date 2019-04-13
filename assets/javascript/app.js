@@ -131,9 +131,8 @@ $(document).ready(function () {
       var artistName = $("<h1>").text(response.name);
       var artistURL = $("<a>").attr("href", response.url).append(artistName);
       var artistImage = $("<img>").attr("src", response.thumb_url);
-      var trackerCount = $("<h2>").text(response.tracker_count + " fans tracking this artist");
-      var upcomingEvents = $("<h2>").text(response.upcoming_event_count + " upcoming events");
-      var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
+      
+     
       $("#bit").attr("href", response.url);
 
 
@@ -241,18 +240,18 @@ $(document).ready(function () {
 
 
     return output;
-    href = "https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
+    //href = "https://www.facebook.com/search/top/?q=aerosmith&epa=SEARCH_BOX"
 
 
 
 
 
   }
-  function addFacebook() {
+  //function addFacebook() {
 
 
 
-  }
+  //}
 
 
 
