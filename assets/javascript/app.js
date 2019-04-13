@@ -106,8 +106,8 @@ $(document).ready(function () {
 
     //
   }
-//<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
-//<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
+  //<td><a href=${ticketURL} target="_blank"> Tickets </a> </td>
+  //<a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40"></img>
 
   function searchBandsInTown(artist) {
 
@@ -136,7 +136,7 @@ $(document).ready(function () {
       // Empty the contents of the artist-div, append the new artist content
       $("#artist-div").empty();
       $("#artist-div").append(artistURL, artistImage);
-      
+
     });
   }
 
@@ -153,11 +153,11 @@ $(document).ready(function () {
     search();
     $("#search-form")[0].reset();
     $('#events-table').show();
-    
-  });  
-  
 
-  
+  });
+
+
+
 
 
 
@@ -249,22 +249,22 @@ $(document).ready(function () {
 
   }
 
- 
 
-  $(document).on('load', function() {
+
+  $(document).on('load', function () {
     $("#main-search").hide();
     $('#modal').modal('show');
 
   })
-      $(".submit").on("click", function(){
-        $("#modal").hide();
-        $("#main-search").show();
-      })
+  $(".submit").on("click", function () {
+    $("#modal").hide();
+    $("#main-search").show();
+  })
 
-      $(".exit").on("click", function(){
-        $("#modal").hide();
-        $("#main-search").show();
-      })
+  $(".exit").on("click", function () {
+    $("#modal").hide();
+    $("#main-search").show();
+  })
 
 
 
