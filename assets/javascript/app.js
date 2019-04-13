@@ -65,7 +65,7 @@ $(document).ready(function () {
     console.log("Last Name: " + lastName);
     console.log("Email Address: " + email);
 
-    $(".welcome").append("Welcome, " + firstName)
+    $(".welcome").append("Welcome  " + firstName)
   });
 
 
