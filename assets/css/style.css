@@ -2,7 +2,6 @@
 .container {
     margin-bottom: 100pt;
     margin-top: 50px;
-    
 }
 
 *{
@@ -62,8 +61,7 @@ header h1{
 
 
 header span{
-
-        color:#dd2826;
+  color:#dd2826;
 }
 
 section{
@@ -87,16 +85,14 @@ margin: 0 auto;
 }
 
 #search-btn:hover{
-
-    opacity:0.9;
-
+ opacity:0.9;
 }
 
 
 #results li{
     padding: 15px;
     list-style:none;
-    overflow:auto;
+    overflow: auto;
     background-color: rgb(245, 245, 245);
 }
 
@@ -227,8 +223,10 @@ margin: 0 auto;
 
 #events-table {
     margin: auto;
-    padding: auto;
+    padding: none;
     display: none;
+    overflow: auto;
+    background-color: white;
 
 }
 a:hover {
@@ -276,7 +274,9 @@ h1 {
     padding: 2px;
     
 }
-
+.submit:active {
+    background-color: white;
+}
 
 
 
