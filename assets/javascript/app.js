@@ -42,30 +42,35 @@ $(document).ready(function () {
 
   var userInfo = firebase.database();
   //var reviewArtist = firebase.database().ref().key();
-
+  
   //creating variables that will be stored
   var firstName;
   var lastName;
   var email;
-
+  
   //Adds name and email information to the firebase on the submit click
   $(".submit").on("click", function () {
     event.preventDefault();
-
+    
     firstName = $("#firstName-input").val().trim();
     lastName = $("#lastName-input").val().trim();
     email = $("#email-input").val().trim();
-
+    
     userInfo.ref().push({
       firstName: firstName,
       lastName: lastName,
       email: email
     });
-
+    
     console.log("First Name: " + firstName);
     console.log("Last Name: " + lastName);
     console.log("Email Address: " + email);
-
+    
+    $("#modal").hide();
+    $("#main-search").show();
+    console.log("test" + email);
+    validateEmail(email);
+    
     $(".welcome").append("Welcome  " + firstName)
   });
 
@@ -254,17 +259,33 @@ $(document).ready(function () {
   $(document).on('load', function () {
     $("#main-search").hide();
     $('#modal').modal('show');
+  })
 
-  })
-  $(".submit").on("click", function () {
-    $("#modal").hide();
-    $("#main-search").show();
-  })
+  // const emailField = $("#email-input").val().trim();
+  // const submitButtom = document.getElementById('submitForm')
+
+  
+
+   
+  // $(".submit").on("click", function () {
+
+    
+  // })
 
   $(".exit").on("click", function () {
     $("#modal").hide();
     $("#main-search").show();
   })
+
+  function validateEmail(emailField) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
 
 
 
