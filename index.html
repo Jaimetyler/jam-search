@@ -7,32 +7,54 @@
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crass-roots-alt" type="text/css"/>
   <title>Jam Search</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
 <body>
   <div class="container">
+
+      
+    <div class="myModal" id = "modal">
+      <button class = "exit">X</button>
+      <h3>Thank you for Using Jam Search</h3>
+      <h6>Join our mailing list to receieve updates</h6>
+      <form>
+        First name:<br>
+        <input type="text" name="firstName" id = "firstName-input"><br>
+        Last name:<br>
+        <input type="text" name="lastName" id = "lastName-input"><br>
+        Email:<br>
+        <input type="email" name="email" id = "email-input">
+      </form>
+      <button class="submit" id="submitForm">Submit</button> 
+
+
+    </div>
+
+
+
+
+
     <div class="row">
 
       <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-3 order-3">
 
         <div class="table card" id="events-table">
-          <tr>
-
-          </tr>
+      
 
         </div>
 
       </div>
 
-      <div class="col-lg-5 col-sm-12 order-lg-2 order-sm-1 order-1">
+      <div class="col-lg-5 col-sm-12 order-lg-2 order-sm-1 order-1" id = "main-search">
 
             <div id="col-cent">
 
-              <h1>Search:<span>Project X</span></h1>
+              <h1><span>Jam Search</span></h1>
               <p class="intro">Search music from all of your favorite bands</p>
               <p class="intro">Enter your favorite artist to search</p>
               
@@ -45,13 +67,14 @@
                 </div>
               </div>
               <div class="icons">
-                <a href="https://facebook.com"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40">
+                <a href="https://www.facebook.com/pg/JamSearch912/photos/?tab=album&album_id=285797105665764"> <img alt="facebook" src="assets/images/facebook.png" width="40" height="40">
                 </a>
                 <a id="bit"> <img alt="Bands in town" src="assets/images/bit.png" width="40" height="40">
                 </a>
                 <a href="https://www.youtube.com"> <img alt="youtube" src="assets/images/tube.png" width="40" height="40">
                 </a>
               </div>
+              <p class = "welcome" id = "welcome-message"></p>
             </div>
           </form>
 
