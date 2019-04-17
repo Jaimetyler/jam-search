@@ -142,7 +142,6 @@ margin: 0 auto;
     border:solid #3b5998;
     border-radius: 19px;
     color: white;
-    mix-blend-mode: difference;
     background-image:url(../images/drums.jpg);
     background-size: cover;
     text-align: center;
