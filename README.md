@@ -1,5 +1,7 @@
 # Jam Search
 
+[Jam Search Link] (https://jaimetyler.github.io/project-x/)
+
 ##Developer Team
 *Corey Yates
 *Jay Groover
