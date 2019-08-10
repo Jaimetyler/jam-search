@@ -99,7 +99,7 @@ $(document).ready(function () {
 
   function searchBandEvents(artist) {
     console.log(artist);
-    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=47972149c9ef95f0470de3a7f2d73af9&date=upcoming";
+    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp&date=upcoming";
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -136,7 +136,7 @@ $(document).ready(function () {
   function searchBandsInTown(artist) {
 
     // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
-    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=47972149c9ef95f0470de3a7f2d73af9";
+    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=codingbootcamp";
     $.ajax({
       url: queryURL,
       method: "GET"
