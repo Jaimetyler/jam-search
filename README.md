@@ -1,6 +1,6 @@
 # Jam Search
 
-[Jam Search Link] (https://jaimetyler.github.io/project-x/)
+![Jam Search Link] (https://jaimetyler.github.io/project-x/)
 
 ##Developer Team
 *Corey Yates
@@ -8,7 +8,7 @@
 *Jaime Tyler
 *Bruce Chamblee
 
-##Description
+## Description
 This was our first group project between the four of us where we would need to utilize GIT Branch management and file collaboration. We decided to make a web app that had a polished front end and UI experience along with building in some AJAX calls through YouTube and Bands in Town.  
 
 ## Getting Started
@@ -56,10 +56,10 @@ For the table in the left column left
 For the Column on the right
 We are returning a picture of the artist along with adding a clickable link to the bands we page. We also are pushing this link to the Bands in Town Icon which will take you to the band you searched Bands in Town Web Page. 
 
-#####YouTube we are returning the following:
+### YouTube we are returning the following:
 We are sending Youtube the name of the artist that you searched and bringing back 5 video results. We initially wanted to embed the video into our page but YouTube doesn't allow some artist to be embeded. So we elected to make a target function which will open the Youtube result on their page. 
 
-###Firebase
+### Firebase
 In Firebase, we have mapped the user info to they entered on the intial modal that was loaded. We then call back the users name and append it to the search box on the page which welcomes them. 
 
 
